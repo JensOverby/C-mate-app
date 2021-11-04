@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".LiveFragment">
+
+        <com.example.cmate.MyLineChart
+            android:id="@+id/power_chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </com.example.cmate.MyLineChart>
+
+        <com.example.cmate.MyLineChart
+            android:id="@+id/voltages_chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/power_chart_view">
+        </com.example.cmate.MyLineChart>
+
+        <com.example.cmate.subviews.MySwipeButton
+            android:id="@+id/spinup_swipe"
+            android:layout_width="180dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:button_background="@drawable/shape_button"
+            app:button_image_disabled="@drawable/ic_twotone_arrow_forward_ios_24"
+            app:button_image_height="50dp"
+            app:button_image_width="60dp"
+            app:button_left_padding="0dp"
+            app:has_activate_state="false"
+            app:initial_state="disabled"
+            app:inner_text="swipe to\n spinup"
+            app:inner_text_background="@drawable/shape_rounded"
+            app:inner_text_bottom_padding="6dp"
+            app:inner_text_color="@android:color/white"
+            app:inner_text_left_padding="40dp"
+            app:inner_text_size="18dp"
+            app:inner_text_top_padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/init_wind_swipe"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/voltages_chart_view" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.example.cmate.subviews.MySwipeButton
+            android:id="@+id/init_wind_swipe"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:button_background="@drawable/shape_button"
+            app:button_image_disabled="@drawable/ic_twotone_arrow_forward_ios_24"
+            app:button_image_height="50dp"
+            app:button_image_width="60dp"
+            app:button_left_padding="0dp"
+            app:has_activate_state="false"
+            app:initial_state="disabled"
+            app:inner_text="swipe to\ninit sensor"
+            app:inner_text_background="@drawable/shape_rounded"
+            app:inner_text_bottom_padding="6dp"
+            app:inner_text_color="@android:color/white"
+            app:inner_text_left_padding="40dp"
+            app:inner_text_size="18dp"
+            app:inner_text_top_padding="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/voltages_chart_view" />
+
+        <com.example.cmate.subviews.MySwipeButton
+            android:id="@+id/turn_on_swipe"
+            android:layout_width="180dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:button_background="@drawable/shape_button"
+            app:button_image_disabled="@drawable/ic_twotone_arrow_forward_ios_24"
+            app:button_image_height="50dp"
+            app:button_image_width="60dp"
+            app:button_left_padding="0dp"
+            app:has_activate_state="false"
+            app:initial_state="disabled"
+            app:inner_text="manual\nmode"
+            app:inner_text_background="@drawable/shape_rounded_red"
+            app:inner_text_bottom_padding="6dp"
+            app:inner_text_color="@android:color/white"
+            app:inner_text_left_padding="40dp"
+            app:inner_text_size="18dp"
+            app:inner_text_top_padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/stop_swipe"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/init_wind_swipe" />
+
+        <com.example.cmate.subviews.MySwipeButton
+            android:id="@+id/stop_swipe"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:button_background="@drawable/shape_button"
+            app:button_image_disabled="@drawable/ic_twotone_arrow_forward_ios_24"
+            app:button_image_height="50dp"
+            app:button_image_width="60dp"
+            app:button_left_padding="0dp"
+            app:has_activate_state="false"
+            app:initial_state="disabled"
+            app:inner_text="swipe to\nbrake"
+            app:inner_text_background="@drawable/shape_rounded_red"
+            app:inner_text_bottom_padding="6dp"
+            app:inner_text_color="@android:color/white"
+            app:inner_text_left_padding="40dp"
+            app:inner_text_size="18dp"
+            app:inner_text_top_padding="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/init_wind_swipe" />
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

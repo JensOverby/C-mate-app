@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DebugFragment">
+
+        <Button
+            android:id="@+id/button_send_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_tx"
+            app:layout_constraintVertical_bias="0.061" />
+
+        <EditText
+            android:id="@+id/et_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="148dp"
+            android:autofillHints="type your command"
+            android:hint="type your command"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/received_txt"
+            android:layout_width="0dp"
+            android:layout_height="189dp"
+            android:layout_marginTop="64dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_send_msg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
